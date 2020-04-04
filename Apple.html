@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Apple.css">
+</head>
+<body>
+    <div class="header">
+        <div class="h-products">
+            <div class="col-12 col-md-6 col-l-3">
+                <button id="iphone" onclick="ClickIphone()">iphone</button>
+            </div>
+            <div class="col-12 col-md-6 col-l-3">
+                <button id="ipad" onclick="ClickIpad()">ipad</button>
+            </div>
+            <div class="col-12 col-md-6 col-l-3">
+                <button id="mac" onclick="">Mac</button>
+            </div>
+            <div class="col-12 col-md-6 col-l-3">
+                <button id="iwatch" onclick="">iwatch</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="">
+        <div class="ctn-item" id="">
+            <div class="col-12 col-md-12 col-l-6">
+                <div class="ctn-pic" id="pic"></div>
+            </div>
+            <div class="col-12 col-md-12 col-l-6">
+                <div class="ctn-button" id="">
+                    <h3 id="money"></h3>
+                    <div class="ctn-color" id="color">
+                        <!-- <h3>顏色</h3> -->
+                    </div>
+                    <div class="ctn-gb" id="gb">
+                        <!-- <h3>容量</h3> -->
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var money = document.getElementById('money');
+        
+        var pic = document.getElementById('pic');
+        var color = document.getElementById('color');
+        var c_h3 = document.createElement('h3');
+        c_h3.innerHTML = '顏色';
+        var gb = document.getElementById('gb');
+        var gb_h3 = document.createElement('h3');
+        gb_h3.innerHTML = '容量';
+
+        var Picimg = document.createElement('img');
+        Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704');
+
+        var white = document.createElement('button');
+        white.innerHTML = '白色';
+        white.onclick = function(){
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-white-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956148115');
+
+             pic.appendChild(Picimg);
+        };
+
+        var black = document.createElement('button');
+        black.innerHTML = '黑色';
+        black.onclick = function(){
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-black-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144418');
+
+             pic.appendChild(Picimg);
+        };
+
+        var green = document.createElement('button');
+        green.innerHTML = '綠色';
+        green.onclick = function(){
+             Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-green-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144838');
+
+             pic.appendChild(Picimg);
+        };
+
+        var yellow = document.createElement('button');
+        yellow.innerHTML = '黃色';
+        yellow.onclick = function(){
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-yellow-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1568141245782');
+
+             pic.appendChild(Picimg);
+        };
+
+        var purple = document.createElement('button');
+        purple.innerHTML = '紫色';
+        purple.onclick = function(){
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-purple-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566960958082');
+
+             pic.appendChild(Picimg);
+        };
+
+        var red = document.createElement('button');
+        red.innerHTML = '紅色';
+        red.onclick = function(){
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-red-select-2019?wid=470&hei=556&fmt=png-alpha&.v=1566956144763');
+
+             pic.appendChild(Picimg);
+        };
+
+
+        var gb1_button = document.createElement('button');
+        gb1_button.innerHTML = '64GB**';
+        gb1_button.onclick = function(){
+            money.innerHTML = 'NT24,900';
+        };
+
+        var gb2_button = document.createElement('button');
+        gb2_button.innerHTML = '128GB**';
+        gb2_button.onclick = function(){
+            money.innerHTML = 'NT26,900';
+        };
+
+        var gb3_button = document.createElement('button');
+        gb3_button.innerHTML = '256GB**';
+        gb3_button.onclick = function(){
+            money.innerHTML = 'NT30,400';
+        };
+        
+
+        window.onload = ClickIphone();
+
+         function ClickIphone(){
+            money.innerHTML = 'NT24,900';
+
+            pic.appendChild(Picimg);
+
+            color.appendChild(c_h3);
+            color.appendChild(white);
+            color.appendChild(black);
+            color.appendChild(green);
+            color.appendChild(yellow);
+            color.appendChild(purple);
+            color.appendChild(red);
+
+            gb.appendChild(gb_h3);
+            gb.appendChild(gb1_button);
+            gb.appendChild(gb2_button);
+            gb.appendChild(gb3_button);
+         }
+
+        
+
+         
+    </script>
+
+</body>
+</html>
