@@ -44,6 +44,8 @@
     </div>
 
     <script>
+        var Picimg = document.createElement('img');
+
         var money = document.getElementById('money');
         
         var pic = document.getElementById('pic');
@@ -53,9 +55,6 @@
         var gb = document.getElementById('gb');
         var gb_h3 = document.createElement('h3');
         gb_h3.innerHTML = '容量';
-
-        var Picimg = document.createElement('img');
-        Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704');
 
         var white = document.createElement('button');
         white.innerHTML = '白色';
@@ -130,7 +129,9 @@
          function ClickIphone(){
             money.innerHTML = 'NT24,900';
 
+            Picimg.setAttribute('src', 'https://store.storeimages.cdn-apple.com/    8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;    hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.   v=1567022175704');
             pic.appendChild(Picimg);
+            
 
             color.appendChild(c_h3);
             color.appendChild(white);
