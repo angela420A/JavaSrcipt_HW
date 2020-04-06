@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Computer.css">
+</head>
+<body>
+    <div class="computer_root">
+        <div class="cpt-border">
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-input">
+                    <input type="text" id="input">
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-btn">
+                    <button type="button" class="" onclick="ather(this)">CE</button>
+                    <button type="button" class="" onclick="ather(this)">C</button>
+                    <button type="button" class="" onclick="ather(this)">DEL</button>
+                    <button type="button" class="" onclick="Putin(this)">÷</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-btn">
+                    <button type="button" class="num" onclick="Putin(this)">7</button>
+                    <button type="button" class="num" onclick="Putin(this)">8</button>
+                    <button type="button" class="num" onclick="Putin(this)">9</button>
+                    <button type="button" class="" onclick="Putin(this)">x</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-btn">
+                    <button type="button" class="num" onclick="Putin(this)">4</button>
+                    <button type="button" class="num" onclick="Putin(this)">5</button>
+                    <button type="button" class="num" onclick="Putin(this)">6</button>
+                    <button type="button" class="" onclick="Putin(this)">-</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-btn">
+                    <button type="button" class="num" onclick="Putin(this)">1</button>
+                    <button type="button" class="num" onclick="Putin(this)">2</button>
+                    <button type="button" class="num" onclick="Putin(this)">3</button>
+                    <button type="button" class="" onclick="Putin(this)">+</button>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-l-12">
+                <div class="cpt-bd-btn">
+                    <button type="button" class="" onclick="Change()">+/-</button>
+                    <button type="button" class="num" onclick="Putin(this)">0</button>
+                    <button type="button" class="" onclick="Putin(this)">.</button>
+                    <button type="button" class="equal" onclick="Putin(this)">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var first = null;
+        var second = null;
+        var icon = null;
+        var input = document.getElementById('input');
+
+        function ather(a){
+            if(a.innerHTML == "CE" || a.innerHTML == "C"){
+                input.value = "";
+            }
+            else{
+                input.value = input.value.substr(0, input.value.length -1);
+            }
+        }
+
+        function Change(){
+            input.value = parseFloat(input.value)*-1;
+        }
+
+        function Putin(e){
+            if(input.value == "" && e.innerHTML == "."){
+                input.value = "0.";
+            }
+            else{
+                if(!isNaN(e.innerHTML) || e.innerHTML == "."){
+                    if(input.value.indexOf(".") != -1){
+                        if(e.innerHTML != "."){
+                            input.value += e.innerHTML;
+                        }
+                    }
+                    else{
+                        input.value += e.innerHTML;
+                    }
+                }
+                else{
+                    if(e.innerHTML != "="){
+                        first = input.value;
+                        icon = e.innerHTML;
+                        input.value = "";
+                    }
+                    else{
+                        second = input.value;
+                        if(first != null && second == null){
+                            input.value = first;
+                        }
+                        else{
+                            Equal(icon, first, second);
+                        }
+                    }
+                }
+            }
+        }
+
+        function Equal(icon, first, second){
+            if(this.icon == "+"){
+                input.value = parseFloat(this.first)+parseFloat(this.second);
+            }
+            else if(this.icon == "-"){
+                input.value = parseFloat(this.first)-parseFloat(this.second);
+            }
+            else if(this.icon == "x"){
+                input.value = parseFloat(this.first)*parseFloat(this.second);
+            }
+            else if(this.icon == "÷"){
+                input.value = parseFloat(this.first)/parseFloat(this.second);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

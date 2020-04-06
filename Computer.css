@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.col-1{width: 83.3333333%;}
+.col-2{width: 16.6666666%;}
+.col-3{width: 25%;}
+.col-4{width: 33.3333333333333%;}
+.col-5{width: 41.6666666666667%;}
+.col-6{width: 50%;}
+.col-7{width: 58.3333333333333%;}
+.col-8{width: 66.6666666666667%;}
+.col-9{width: 75%;}
+.col-10{width: 83.3333333333333%;}
+.col-11{width: 91.6666666666667%;}
+.col-12{width: 100%;}
+
+@media screen and (min-width: 768px){
+    .col-md-1{width: 83.3333333%;}
+    .col-md-2{width: 16.6666666%;}
+    .col-md-3{width: 25%;}
+    .col-md-4{width: 33.3333333333333%;}
+    .col-md-5{width: 41.6666666666667%;}
+    .col-md-6{width: 50%;}
+    .col-md-7{width: 58.3333333333333%;}
+    .col-md-8{width: 66.6666666666667%;}
+    .col-md-9{width: 75%;}
+    .col-md-10{width: 83.3333333333333%;}
+    .col-md-11{width: 91.6666666666667%;}
+    .col-md-12{width: 100%;}
+}
+
+@media screen and (min-width: 1200px){
+    .col-l-1{width: 83.3333333%;}
+    .col-l-2{width: 16.6666666%;}
+    .col-l-3{width: 25%;}
+    .col-l-4{width: 33.3333333333333%;}
+    .col-l-5{width: 41.6666666666667%;}
+    .col-l-6{width: 50%;}
+    .col-l-7{width: 58.3333333333333%;}
+    .col-l-8{width: 66.6666666666667%;}
+    .col-l-9{width: 75%;}
+    .col-l-10{width: 83.3333333333333%;}
+    .col-l-11{width: 91.6666666666667%;}
+    .col-l-12{width: 100%;}
+}
+
+.computer_root{
+    padding: 50px 0px;
+}
+
+.cpt-border{
+    border: 1px solid lightgray;
+    margin: auto;
+    width: 600px;
+    padding: 20px 0px;
+}
+
+.cpt-bd-input{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cpt-bd-input input{
+    padding: 10px 0px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cpt-bd-btn{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cpt-bd-btn button{
+    width: 100px;
+    height: 40px;
+    background-color: #dfe1e5;
+    border: none;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+
+.cpt-bd-btn button:hover{
+    background-color: #D9D9D9;
+}
+
+button[class*=num]{
+    background-color: #F5F5F5;
+}
+
+button[class*=equal]{
+    background-color: #4285f4;
+    font-weight: bold;
+    color: white;
+}
+
+button[class*=equal]:hover{
+    background-color: #4285f4;
+}
