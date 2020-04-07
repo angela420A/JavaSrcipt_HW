@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Guess number</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+
+    <!-- Custom styles for this template -->
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Project name</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Analytics</a></li>
+                    <li><a href="#">Export</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Nav item</a></li>
+                    <li><a href="">Nav item again</a></li>
+                    <li><a href="">One more nav</a></li>
+                    <li><a href="">Another nav item</a></li>
+                    <li><a href="">More navigation</a></li>
+                </ul>
+                <ul class="nav nav-sidebar">
+                    <li><a href="">Nav item again</a></li>
+                    <li><a href="">One more nav</a></li>
+                    <li><a href="">Another nav item</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="btn-group btn-group-justified">
+                                <a id="start" type="button" class="btn btn-default" onclick="Startgame()">開始</a>
+                                <a id="restart" type="button" class="btn btn-default" onclick="Abortgame()">放棄重來</a>
+                                <a id="cheat" type="button" class="btn btn-default" onclick="Showanswer()">看答案</a>
+                            </div>
+                            <br>
+                            <ul id="guessResults" class="list-group my-3"></ul>
+                            <div class="input-group">
+                                <span class="input-group-addon" id="sizing-addon1">猜答案</span>
+                                <input id="userGuess" type="text" name="" class="form-control" value=""
+                                    required="required">
+                                <span class="input-group-btn">
+                                    <a id="guess" type="button" class="btn btn-default" onclick="Doguess()">猜!</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var anwser = ""; //你在外面設好變數了 東西已經存在這變數了!!!! 
+        var A = 0, B =0;
+
+
+
+        function Startgame() {
+            anwser = ""
+            while (anwser.length < 4) {
+                var num = Math.floor(Math.random() * 10);
+                if (anwser.indexOf(num) == -1) {
+                    anwser += num;
+                }
+            }
+            alert("亂數已產生 遊戲開始!");
+        }
+
+        function Doguess() {
+            var input = document.getElementById('userGuess').value;
+            //在這先判斷 使用者輸入的 是不是符合 4個 有沒有填之類的
+            //上面判斷完 拿 anwser 去跟 userinput 判斷 A 用 charAt() B 用 indexof(
+            if (input == "" || input.length != 4 || isNaN(input)) {
+                alert("輸入不對8 傻瓜");
+            }
+
+            // for (var x = 0; x < input.length; x++) {
+
+            //     //為甚麼input[x]的寫法和input.charAt(i)不同?
+            //     // var num = input[x]; 
+            //     var num = input.charAt(x);
+            //     if(input.indexOf(num) != -1){
+            //         alert("傻蛋，不可以輸入重複的數字");
+                    
+            //     }
+            // }
+
+            for(let x=0; x<input.length; x++){
+                if(anwser[x] == input[x]){
+                    A++;
+                }
+                else if(anwser.indexOf(input[x]) != -1){
+                    B++;
+                }
+            }
+
+            var ul = document.getElementById('guessResults');
+            var li = document.createElement('li');
+            li.className = 'list-group-item';
+            if(A==4){ 
+                 li.innerHTML = "<span class='label label-success'>" + A + "A" + B + "B" + "</span>" + input;
+                 A = "";
+                 B = "";
+                 alert("恭喜贏囉!");
+            }
+            else{
+                li.innerHTML = "<span class='label label-danger'>"  + A + "A" + B + "B" + "</span>" + input;
+                A = "";
+                B = "";
+            }
+
+            ul.appendChild(li);
+
+        }
+
+        function Showanswer() {
+            alert("答案是 : " + anwser);
+        }
+
+        function Abortgame() {  
+            alert("遊戲已重新開始");
+            return Startgame();
+        }
+
+    </script>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
