@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .root{
+        text-align: center;
+        
+    }
+    table{
+        border-collapse:collapse;
+        border: 1px solid gray;
+    }
+    th{
+        border-collapse:collapse;
+        border: 1px solid gray;
+        text-align: center;
+        padding: 0px 10px;
+        cursor: pointer;
+    }
+    td{
+        border-collapse:collapse;
+        border: 1px solid gray;
+        text-align: center;
+        padding: 0px 10px;
+    }
+    
+</style>
+<body>
+    <div class="root" id="div">
+        <h3>產品清單表格</h3>
+        
+    </div>
+
+    <script>
+        // var clicktimes = false;
+        var beenprase = '';
+        let products = "";
+
+        window.onload = function Jsontest() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+                // document.getElementById('msg').innerHTML=this.responseText;
+                products = JSON.parse(this.responseText);
+                Getkeys(products);
+            }
+            xhr.open("GET", "http://127.0.0.1:5501/ipad.json");
+            xhr.send(); 
+        }
+
+        function Getkeys(products){
+            var div = document.getElementById('div');
+            var table = document.createElement('table');
+            table.setAttribute('align', 'center');
+            table.setAttribute('id', 'table');
+            var thead = document.createElement('thead');
+            var tr = document.createElement('tr');
+
+            var tbody = document.createElement('tbody');
+            tbody.setAttribute('id', 'tbody');
+            table.appendChild(tbody);
+
+            
+            for(var i in products[0]){
+                var th = document.createElement('th');
+                th.setAttribute('onclick', 'Sort(this)');
+                th.innerHTML = i;
+                tr.appendChild(th);
+            }
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            div.appendChild(table);
+
+            Getvalues(products);
+        }
+
+        function Getvalues(products) {
+            var table = document.getElementById('table');
+
+            for(var i in products){
+                var tr = document.createElement('tr');
+                var value = Object.values(products[i]);
+                for(var j of value){
+                    var td = document.createElement('td');
+                    td.innerHTML = j;
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+        }
+
+        //每一個title被onclick會發生的事件
+        function Sort(btn) {
+            if(btn.innerHTML != beenprase){
+                beenprase = btn.innerHTML;
+                return Smalltolarge(btn.innerHTML);
+            }
+            else{
+                beenprase = "";
+                return Largetosmall(btn.innerHTML);
+            }
+        }
+
+        function Smalltolarge(btn) {
+            products.sort(function(a,b){
+                if(a[btn] > b[btn]){return 1}
+                if(a[btn] < b[btn]){return -1}
+                return 0;
+            })
+            var tbody = document.getElementById('tbody');
+            tbody.innerHTML = "";
+            Getvalues(products);
+        }
+        
+
+        function Largetosmall(btn) {
+            products.sort(function(a,b){
+                if(a[btn] < b[btn]){return 1}
+                if(a[btn] > b[btn]){return -1}
+                return 0;
+            })
+            var tbody = document.getElementById('tbody');
+            tbody.innerHTML = "";
+            Getvalues(products);
+        }
+
+        
+
+        
+
+    </script>
+</body>
+</html>
