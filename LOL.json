@@ -1,6 +1,7 @@
 [
     {
         "name" : "阿璃 Ahri",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1259276b6d1efa78/5db05fa86e8b0c6d038c5ca2/RiotX_ChampionList_ahri.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "梵斯塔雅的恩惠",
             "Q" : "幻玉 ",
@@ -23,6 +24,7 @@
 
     {
         "name" : "艾希 Ashe",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt943aae038e2dee98/5db05fa8e9effa6ba5295f91/RiotX_ChampionList_ashe.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "冰霜射擊",
             "Q" : "專注射擊",
@@ -44,29 +46,31 @@
     },
 
     {
-        "name" : "亞菲利歐 Aphelios",
+        "name" : "拉克絲 Lux",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb94b4161d8022c45/5db05fdfe9d7526ab429e53c/RiotX_ChampionList_lux.jpg?quality=90&width=250",
         "skill" : {
-            "被動" : "殺手與先知",
-            "Q" : "武器技能",
-            "W" : "月相輪轉",
-            "E" : "武器佇列系統",
-            "R" : "月夜守護"
+            "被動" : "光芒四射",
+            "Q" : "光明束縛",
+            "W" : "光障壁",
+            "E" : "光明異點",
+            "R" : "終極閃光"
         },
         "stats" : {
-            "life" : "500 (+86 每級)",
-            "life Recovery" : "3.25 (+0.55 每級)",
-            "Magic" : "348 (+42 每級)",
-            "Magic Recovery" : "6.5 (+0.4 每級)",
-            "Movement speed" : "325",
-            "Physical Attack" : "57 (+2.2 每級)",
+            "life" : "490 (+85 每級)",
+            "life Recovery" : "5.5 (+0.55 每級)",
+            "Magic" : "480 (+23.5 每級)",
+            "Magic Recovery" : "8 (+0.8 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "53.54 (+3.3 每級)",
             "Attack range" : "550",
-            "Physical Defense" : "28 (+3 每級)",
-            "Magic Defense" : "26 (+0.5 每級)"
+            "Physical Defense" : "18.72 (+4 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
         }
     },
 
     {
         "name" : "巴德 Bard",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbbe3ce0c0ae1305b/5db05fb23a326d6df6c0e7b3/RiotX_ChampionList_bard.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "旅者引領",
             "Q" : "宇宙制約",
@@ -89,6 +93,7 @@
 
     {
         "name" : "娜米 Nami",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt13bec39f49dc35ee/5db05fe956458c6b3fc1751f/RiotX_ChampionList_nami.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "疾速波濤",
             "Q" : "禁錮水牢",
@@ -111,6 +116,7 @@
 
     {
         "name" : "索拉卡 Soraka",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt2141839fdc483592/5db06003e9effa6ba5295fad/RiotX_ChampionList_soraka.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "群星指路",
             "Q" : "殞星召喚",
@@ -133,6 +139,7 @@
 
     {
         "name" : "瑟雷西 Thresh",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt46555de3bfa94d44/5db0600b2140ec675d68f4b5/RiotX_ChampionList_thresh.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "靈魂饗宴",
             "Q" : "死亡宣告",
@@ -155,6 +162,7 @@
 
     {
         "name" : "剎雅 Xayah",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt0d029ccdb18a4299/5db0601ba6470d6ab91ce5be/RiotX_ChampionList_xayah.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "一翦兩斷",
             "Q" : "赤落連匕",
@@ -177,6 +185,7 @@
 
     {
         "name" : "柔依 Zoe",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltd18587f31803441d/5db060226e8b0c6d038c5cc6/RiotX_ChampionList_zoe.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "閃耀星火",
             "Q" : "星迴百轉",
@@ -199,6 +208,7 @@
 
     {
         "name" : "汎 Vayne",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9eaabc908956c8b0/5db060146af83b6d7032c90a/RiotX_ChampionList_vayne.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "夜之狩獵",
             "Q" : "翻滾瞄準",
@@ -221,6 +231,7 @@
 
     {
         "name" : "寇格魔 Kog'Maw",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltaf483c8f812369fa/5db05fde823d426762825ff1/RiotX_ChampionList_kogmaw.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "來自伊卡西亞的驚喜",
             "Q" : "腐蝕唾液",
@@ -243,6 +254,7 @@
 
     {
         "name" : "凱莎 Kai'Sa",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blte38dc660dfe79204/5db05fce2dc72966da74670c/RiotX_ChampionList_kaisa.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "二階蟲甲",
             "Q" : "伊卡西亞魔雨",
@@ -265,6 +277,7 @@
 
     {
         "name" : "吉茵珂絲 Jinx",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta2cba784d9fad4b8/5db05fce89fb926b491ed817/RiotX_ChampionList_jinx.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "狂躁",
             "Q" : "鬼靈精怪",
@@ -287,6 +300,7 @@
 
     {
         "name" : "凱特琳 Caitlyn",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt014f4b6fc9bacd10/5db05fb00b39e86c2f83dbff/RiotX_ChampionList_caitlyn.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "爆頭",
             "Q" : "鎮暴射擊",
@@ -309,6 +323,7 @@
 
     {
         "name" : "燼 Jhin",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbf6c70d9272a5a2a/5db05fcfe9d7526ab429e532/RiotX_ChampionList_jhin.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "低語",
             "Q" : "狂舞手雷",
@@ -331,6 +346,7 @@
 
     {
         "name" : "鏡爪 Kindred",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltc0f0007660b7a07b/5db05fd689fb926b491ed823/RiotX_ChampionList_kindred.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "鏡爪印記",
             "Q" : "舞動箭矢",
@@ -353,6 +369,7 @@
 
     {
         "name" : "銳空 Rakan",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltbe844b30961ccb7c/5db05ffb2140ec675d68f4ad/RiotX_ChampionList_rakan.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "奇異羽篷",
             "Q" : "癒光飛翎",
@@ -375,6 +392,7 @@
 
     {
         "name" : "露璐 Lulu",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt424f04814efb3aca/5db05fdfe9d7526ab429e538/RiotX_ChampionList_lulu.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "皮克斯, 守護妖精",
             "Q" : "閃耀雙重奏",
@@ -397,6 +415,7 @@
 
     {
         "name" : "飛斯 Fizz",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6000fa69e03c25c0/5db05fbc56458c6b3fc17513/RiotX_ChampionList_fizz.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "靈巧海族",
             "Q" : "現撈海膽",
@@ -419,6 +438,7 @@
 
     {
         "name" : "提摩 Teemo",
+        "img" : "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt30ddbbdc0549078a/5db0600da6470d6ab91ce5b8/RiotX_ChampionList_teemo.jpg?quality=90&width=250",
         "skill" : {
             "被動" : "約德爾游擊隊",
             "Q" : "致盲吹箭",

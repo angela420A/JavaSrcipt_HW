@@ -9,35 +9,54 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <title>Hello, world!</title>
 </head>
 
 <body>
     <template id="templateCard">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img id="img" class="card-img-top" src="" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"></h5>
+                <a href="#" class="btn btn-primary">See more</a>
             </div>
         </div>
     </template>
 
+    <div id="container"></div>
+
     <script>
         $.ajax({
             type: "GET",
-            url: "",
+            url: "https://raw.githubusercontent.com/angela420A/JavaSrcipt_HW/master/LOL.json",
             data: "data",
             dataType: "Json",
-            success: function(response){
-
+            success: function (response) {
+                Setcard(response);
             },
-            error: function(response){
+            error: function (response) {
 
             }
         });
+
+        function Setcard(champions) {
+            let div = document.getElementById('container');
+            let Card = document.getElementById('templateCard');
+
+            champions.forEach(item => {
+                let Copytem = Card.content.cloneNode(true);
+                let img = Copytem.getElementById('img');
+                let title = Copytem.querySelector('h5');
+                
+                img.setAttribute('src', item.img);
+                title.textContent = item.name;
+                div.appendChild(Copytem);
+            });
+        }
     </script>
 
 
