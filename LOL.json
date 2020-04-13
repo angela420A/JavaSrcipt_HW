@@ -1,0 +1,441 @@
+[
+    {
+        "name" : "阿璃 Ahri",
+        "skill" : {
+            "被動" : "梵斯塔雅的恩惠",
+            "Q" : "幻玉 ",
+            "W" : "魅火",
+            "E" : "傾城",
+            "R" : "飛仙"
+        },
+        "stats" : {
+            "life" : "526+(92 每級)",
+            "life Recovery" : "6.5 (+0.6 每級)",
+            "Magic" : "418 (+25 每級)",
+            "Magic Recovery" : "8 (+0.8 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "53.04 (+3 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "20.88 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "艾希 Ashe",
+        "skill" : {
+            "被動" : "冰霜射擊",
+            "Q" : "專注射擊",
+            "W" : "萬箭齊發",
+            "E" : "鷹擊長空",
+            "R" : "魔法水晶箭"
+        },
+        "stats" : {
+            "life" : "539 (+85 每級)",
+            "life Recovery" : "3.5 (+0.55 每級)",
+            "Magic" : "280 (+32 每級)",
+            "Magic Recovery" : "6.972 (+0.4 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "61 (+2.96 每級)",
+            "Attack range" : "600",
+            "Physical Defense" : "26 (+3.4 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "亞菲利歐 Aphelios",
+        "skill" : {
+            "被動" : "殺手與先知",
+            "Q" : "武器技能",
+            "W" : "月相輪轉",
+            "E" : "武器佇列系統",
+            "R" : "月夜守護"
+        },
+        "stats" : {
+            "life" : "500 (+86 每級)",
+            "life Recovery" : "3.25 (+0.55 每級)",
+            "Magic" : "348 (+42 每級)",
+            "Magic Recovery" : "6.5 (+0.4 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "57 (+2.2 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "28 (+3 每級)",
+            "Magic Defense" : "26 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "巴德 Bard",
+        "skill" : {
+            "被動" : "旅者引領",
+            "Q" : "宇宙制約",
+            "W" : "守望神龕",
+            "E" : "奇幻旅程",
+            "R" : "凝滯命域"
+        },
+        "stats" : {
+            "life" : "575 (+89 每級)",
+            "life Recovery" : "5.5 (+0.55 每級)",
+            "Magic" : "350 (+50 每級)",
+            "Magic Recovery" : "6 (+0.45 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "52 (+3 每級)",
+            "Attack range" : "500",
+            "Physical Defense" : "34 (+4 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "娜米 Nami",
+        "skill" : {
+            "被動" : "疾速波濤",
+            "Q" : "禁錮水牢",
+            "W" : "跳躍水柱",
+            "E" : "深海恩賜",
+            "R" : "驚滔駭浪"
+        },
+        "stats" : {
+            "life" : "489.32 (+74 每級)",
+            "life Recovery" : "5.5 (+0.55 每級)",
+            "Magic" : "377.24 (+43 每級)",
+            "Magic Recovery" : "11.5 (+0.4 每級)",
+            "Movement speed" : "335",
+            "Physical Attack" : "51.208 (+3.1 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "29 (+4 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "索拉卡 Soraka",
+        "skill" : {
+            "被動" : "群星指路",
+            "Q" : "殞星召喚",
+            "W" : "星之祝福",
+            "E" : "寂靜星河",
+            "R" : "祈願"
+        },
+        "stats" : {
+            "life" : "535 (+74 每級)",
+            "life Recovery" : "2.5 (+0.5 每級)",
+            "Magic" : "375 (+40 每級)",
+            "Magic Recovery" : "11.5 (+0.4 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "50 (+3 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "32 (+3.8 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "瑟雷西 Thresh",
+        "skill" : {
+            "被動" : "靈魂饗宴",
+            "Q" : "死亡宣告",
+            "W" : "鬼影燈籠",
+            "E" : "懾魂掃蕩",
+            "R" : "惡靈領域"
+        },
+        "stats" : {
+            "life" : "560.52 (+93 每級)",
+            "life Recovery" : "7 (+0.55 每級)",
+            "Magic" : "273.92 (+44 每級)",
+            "Magic Recovery" : "6 (+0.8 每級)",
+            "Movement speed" : "335",
+            "Physical Attack" : "56 (+2.2 每級)",
+            "Attack range" : "450",
+            "Physical Defense" : "28 (+0 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "剎雅 Xayah",
+        "skill" : {
+            "被動" : "一翦兩斷",
+            "Q" : "赤落連匕",
+            "W" : "奪命疾翼",
+            "E" : "漫天血刃",
+            "R" : "驟羽暴風"
+        },
+        "stats" : {
+            "life" : "561 (+86 每級)",
+            "life Recovery" : "3.25 (+0.75 每級)",
+            "Magic" : "340 (+40 每級)",
+            "Magic Recovery" : "8.25 (+0.75 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "60 (+2.9 每級)",
+            "Attack range" : "525",
+            "Physical Defense" : "25 (+3 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "柔依 Zoe",
+        "skill" : {
+            "被動" : "閃耀星火",
+            "Q" : "星迴百轉",
+            "W" : "法術竊盜",
+            "E" : "沉睡夢域",
+            "R" : "星界躍動"
+        },
+        "stats" : {
+            "life" : "560 (+92 每級)",
+            "life Recovery" : "6.5 (+0.6 每級)",
+            "Magic" : "425 (+25 每級)",
+            "Magic Recovery" : "8 (+0.65 每級)",
+            "Movement speed" : "340",
+            "Physical Attack" : "58 (+3.3 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "20.8 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "汎 Vayne",
+        "skill" : {
+            "被動" : "夜之狩獵",
+            "Q" : "翻滾瞄準",
+            "W" : "神聖銀箭",
+            "E" : "重型弩箭",
+            "R" : "死亡通緝"
+        },
+        "stats" : {
+            "life" : "515 (+89 每級)",
+            "life Recovery" : "3.5 (+0.55 每級)",
+            "Magic" : "231.8 (+35 每級)",
+            "Magic Recovery" : "6.972 (+0.4 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "60 (+2.36 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "23 (+3.4 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "寇格魔 Kog'Maw",
+        "skill" : {
+            "被動" : "來自伊卡西亞的驚喜",
+            "Q" : "腐蝕唾液",
+            "W" : "生化彈幕",
+            "E" : "虛空淤泥",
+            "R" : "生化巨炮"
+        },
+        "stats" : {
+            "life" : "534 (+88 每級)",
+            "life Recovery" : "3.75 (+0.55 每級)",
+            "Magic" : "325 (+40 每級)",
+            "Magic Recovery" : "8.75 (+0.7 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "61 (+3.11 每級)",
+            "Attack range" : "500",
+            "Physical Defense" : "24 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "凱莎 Kai'Sa",
+        "skill" : {
+            "被動" : "二階蟲甲",
+            "Q" : "伊卡西亞魔雨",
+            "W" : "虛空探索者",
+            "E" : "極速充能",
+            "R" : "殺手本能"
+        },
+        "stats" : {
+            "life" : "571 (+86 每級)",
+            "life Recovery" : "3.5 (+0.55 每級)",
+            "Magic" : "344.88 (+38 每級)",
+            "Magic Recovery" : "8.2 (+0.45 每級)",
+            "Movement speed" : "335",
+            "Physical Attack" : "59 (+1.7 每級)",
+            "Attack range" : "525",
+            "Physical Defense" : "28 (+3 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "吉茵珂絲 Jinx",
+        "skill" : {
+            "被動" : "狂躁",
+            "Q" : "鬼靈精怪",
+            "W" : "咻咻",
+            "E" : "咬咬手榴彈",
+            "R" : "超威能死亡火箭"
+        },
+        "stats" : {
+            "life" : "581 (+84 每級)",
+            "life Recovery" : "3.75 (+0.5 每級)",
+            "Magic" : "245 (+45 每級)",
+            "Magic Recovery" : "6.7 (+1 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "57 (+3.4 每級)",
+            "Attack range" : "525",
+            "Physical Defense" : "28 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "凱特琳 Caitlyn",
+        "skill" : {
+            "被動" : "爆頭",
+            "Q" : "鎮暴射擊",
+            "W" : "捕獲陷阱",
+            "E" : "九零式獵網",
+            "R" : "王牌射手"
+        },
+        "stats" : {
+            "life" : "481 (+91 每級)",
+            "life Recovery" : "3.5 (+0.55 每級)",
+            "Magic" : "313.7 (+35 每級)",
+            "Magic Recovery" : "7.4 (+0.55 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "62 (+2.88 每級)",
+            "Attack range" : "650",
+            "Physical Defense" : "28 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "燼 Jhin",
+        "skill" : {
+            "被動" : "低語",
+            "Q" : "狂舞手雷",
+            "W" : "致命伏筆",
+            "E" : "魔幻時刻",
+            "R" : "華麗謝幕"
+        },
+        "stats" : {
+            "life" : "556 (+91 每級)",
+            "life Recovery" : "3.75 (+0.55 每級)",
+            "Magic" : "300 (+50 每級)",
+            "Magic Recovery" : "6 (+0.8 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "59 (+4.7 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "24 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "鏡爪 Kindred",
+        "skill" : {
+            "被動" : "鏡爪印記",
+            "Q" : "舞動箭矢",
+            "W" : "魔狼狂熱",
+            "E" : "恐懼蔓延",
+            "R" : "神羊喘息"
+        },
+        "stats" : {
+            "life" : "540 (+85 每級)",
+            "life Recovery" : "7 (+0.55 每級)",
+            "Magic" : "300 (+35 每級)",
+            "Magic Recovery" : "7 (+0.4 每級)",
+            "Movement speed" : "325",
+            "Physical Attack" : "65 (+2.5 每級)",
+            "Attack range" : "500",
+            "Physical Defense" : "29 (+3.5 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "銳空 Rakan",
+        "skill" : {
+            "被動" : "奇異羽篷",
+            "Q" : "癒光飛翎",
+            "W" : "盛大登場",
+            "E" : "戰鬥舞踊",
+            "R" : "迷心迅步"
+        },
+        "stats" : {
+            "life" : "540 (+85 每級)",
+            "life Recovery" : "5 (+0.5 每級)",
+            "Magic" : "315 (+50 每級)",
+            "Magic Recovery" : "8.75 (+0.5 每級)",
+            "Movement speed" : "335",
+            "Physical Attack" : "62 (+3.5 每級)",
+            "Attack range" : "300",
+            "Physical Defense" : "32 (+3.9 每級)",
+            "Magic Defense" : "32.1 (+1.25 每級)"
+        }
+    },
+
+    {
+        "name" : "露璐 Lulu",
+        "skill" : {
+            "被動" : "皮克斯, 守護妖精",
+            "Q" : "閃耀雙重奏",
+            "W" : "幻想曲",
+            "E" : "帥啊小皮",
+            "R" : "究極鍊化"
+        },
+        "stats" : {
+            "life" : "525 (+74 每級)",
+            "life Recovery" : "6 (+0.6 每級)",
+            "Magic" : "350 (+55 每級)",
+            "Magic Recovery" : "11 (+0.6 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "47 (+2.6 每級)",
+            "Attack range" : "550",
+            "Physical Defense" : "29 (+3.7 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    },
+
+    {
+        "name" : "飛斯 Fizz",
+        "skill" : {
+            "被動" : "靈巧海族",
+            "Q" : "現撈海膽",
+            "W" : "海神三叉戟",
+            "E" : "愛玩小飛 / 調皮小飛",
+            "R" : "海之霸主"
+        },
+        "stats" : {
+            "life" : "570 (+98 每級)",
+            "life Recovery" : "8 (+0.7 每級)",
+            "Magic" : "317.2 (+37 每級)",
+            "Magic Recovery" : "6 (+0.8 每級)",
+            "Movement speed" : "335",
+            "Physical Attack" : "58.04 (+3 每級)",
+            "Attack range" : "175",
+            "Physical Defense" : "22.412 (+3.4 每級)",
+            "Magic Defense" : "32.1 (+1.25 每級)"
+        }
+    },
+
+    {
+        "name" : "提摩 Teemo",
+        "skill" : {
+            "被動" : "約德爾游擊隊",
+            "Q" : "致盲吹箭",
+            "W" : "衝刺",
+            "E" : "劇毒射擊",
+            "R" : "毒性陷阱"
+        },
+        "stats" : {
+            "life" : "528 (+90 每級)",
+            "life Recovery" : "5.5 (+0.65 每級)",
+            "Magic" : "334 (+20 每級)",
+            "Magic Recovery" : "9.6 (+0.45 每級)",
+            "Movement speed" : "330",
+            "Physical Attack" : "54 (+3 每級)",
+            "Attack range" : "500",
+            "Physical Defense" : "24.3 (+3.75 每級)",
+            "Magic Defense" : "30 (+0.5 每級)"
+        }
+    }
+]
