@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/Modules/MyHelper.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+        table, td{
+            border: 1px solid gray;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>台灣縣市地址</h1>
+    <table id="table">
+        <button id="pushbtn">按下我啊 :D</button>
+        <template id="templateRow">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+    </table>
+
+
+    <script>
+        window.onload = function(){
+            $.ajax({
+                type: "GET",
+                url: "https://raw.githubusercontent.com/gene870607/gene870607-vs_code_javascript_HW/master/JavaScript/TaiwanAddress.json",
+                data: "data",
+                dataType: "Json",
+                success: function(response){
+                    
+                    $g('#pushbtn').addEventListener('click', function(){
+                        let templateRow = $g('#templateRow');
+
+                        response.forEach((item) => {
+                            item.AreaList.forEach((index) => {
+                                let cloneContent = templateRow.content.cloneNode(true);
+                                let tds = cloneContent.querySelectorAll('td');
+                                tds[0].textContent = item.CityName;
+                                tds[1].textContent = index.AreaName;
+                                tds[2].textContent = index.ZipCode;
+                                $g('#table').appendChild(cloneContent);
+                            });
+                        });
+
+
+                    });
+                },
+                erroor: function(response){alert("error!!");}
+            });
+        };
+    </script>
+</body>
+</html>
