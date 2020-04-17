@@ -10,53 +10,171 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <title>Hello, world!</title>
+    <title>League Of Legends - CHAMPIONS</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .row {
+            margin: auto;
+        }
+
+        .card {
+            margin: 5px 5px;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .text-white {
+            cursor: pointer;
+        }
+
+        .text-white:hover h5 {
+            background-color: black;
+            opacity: .6;
+            color: white;
+        }
+
+        .card-img-overlay {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+
+        h5 {
+            background-color: white;
+            opacity: .7;
+            padding: 10px 20px;
+            margin-bottom: 0px;
+            width: 100%;
+            color: black;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 18px;
+            transition: .3s;
+        }
+
+        .card-title {
+            margin-bottom: 0px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <div class="row justify-content-center" id="container">
+
+        </div>
+    </div>
+
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 id="modaltitle" class="modal-title"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>技能</h3>
+                    <p id="bodyP"></p>
+                </div>
+                <div class="modal-footer justify-content-start">
+                    <h3>詳細說明</h3>
+                    <p id="footerP"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <template id="templateCard">
-        <div class="card" style="width: 18rem;">
-            <img id="img" class="card-img-top" src="" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <a href="#" class="btn btn-primary">See more</a>
+        <div id="card" class="card text-white">
+            <img id="img" src="" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title" onclick="Information(this)"></h5>
             </div>
         </div>
     </template>
 
-    <div id="container"></div>
-
     <script>
+        var data = [];
+
         $.ajax({
             type: "GET",
             url: "https://raw.githubusercontent.com/angela420A/JavaSrcipt_HW/master/LOL.json",
             data: "data",
             dataType: "Json",
+            //async: true(非同步) / false(同步)
+            // beforeSend: function(){
+            // 可以導入等待的圖形(轉圈圈)，當他把資料都讀取好後，才會跑出頁面。
+            // }
             success: function (response) {
+                data = response;
                 Setcard(response);
             },
             error: function (response) {
-
+                alert('Error!!');
             }
         });
 
         function Setcard(champions) {
             let div = document.getElementById('container');
-            let Card = document.getElementById('templateCard');
+            let Cardtem = document.getElementById('templateCard');
 
-            champions.forEach(item => {
-                let Copytem = Card.content.cloneNode(true);
+            champions.forEach((item, index) => {
+                let Copytem = Cardtem.content.cloneNode(true);
                 let img = Copytem.getElementById('img');
-                let title = Copytem.querySelector('h5');
-                
+                let cardtitle = Copytem.querySelector('h5');
+
                 img.setAttribute('src', item.img);
-                title.textContent = item.name;
+                cardtitle.textContent = item.name;
                 div.appendChild(Copytem);
+
+                // document.getElementsByClassName('card')[0].addEventListener('click', function () {
+                //     let modaltitle = document.getElementById('modaltitle');
+                //     let bodyP = document.getElementById('bodyP');
+                //     let footerP = document.getElementById('footerP');
+                //     // let test = this.id;
+                //     debugger;
+                //     modaltitle.textContent = data[this.id].name;
+                //     bodyP.textContent = JSON.stringify(data[this.id].skill);
+                //     footerP.textContent = JSON.stringify(data[this.id].stats);
+                //     $('.modal').modal('show');
+                // });
+
             });
         }
+
+        function Information(e) {
+            data.forEach(item => {
+                if(item.name == e.textContent){
+                    let modaltitle = document.getElementById('modaltitle');
+                    let bodyP = document.getElementById('bodyP');
+                    let footerP = document.getElementById('footerP');
+
+                    modaltitle.textContent = item.name;
+                    bodyP.textContent = JSON.stringify(item.skill); //先輸出key在輸出values
+                    footerP.textContent = JSON.stringify(item.stats); //沒br 而且物件的框框也出來了
+                    let test = $('#modal');
+                    test.modal('show');
+                }
+            });
+        }
+        
+
+
+
     </script>
 
 
