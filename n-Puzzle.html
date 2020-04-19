@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="/Modules/MyHelper.js"></script>
+    <style>
+        .root{
+            text-align: center;
+        }
+        .n-puzzle {
+            width: 480px;
+            height: 480px;
+            border: solid 5px gray;
+            padding: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .picell {
+            width: 118px;
+            height: 118px;
+            overflow: hidden;
+            border: 1px solid white;
+            cursor: pointer;
+        }
+
+        input{
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action="/somewhere/to/upload" enctype="multipart/form-data">
+        <input name="progressbarTW_img" type="file" accept="image/gif, image/jpeg, image/png">
+    </form> -->
+
+    <div class="root">
+        <input type="button" value="遊戲開始" />
+        <div class="n-puzzle" id="puzzle"></div>
+    </div>
+
+    <script>
+
+        $(function () {
+            var posConv = {};
+            for (var i = 0; i < 16; i++) {
+                $('#puzzle').append("<div class='picell' id='Pic" + i + "' ><img src='https://picsum.photos/480/480/?random=1'></div>");
+                //計算第幾列
+                var row = parseInt(i / 4);
+                //計算第幾列的第幾個
+                var col = i % 4;
+                $("#Pic" + i + " img").css("margin-left", col * -120 + 1).css("margin-top", row * -120 + 1);
+                posConv[i] = { row: row, col: col };
+            }
+            //移除第一章圖片(左上角)
+            $("#Pic0 img").remove();
+
+
+            function getNearPos(i) {
+                var pool = [];
+                var row = posConv[i].row;
+                var col = posConv[i].col;
+                //toCheck用來放入待比對的對象
+                if (row > 0) //上
+                    pool.push((row - 1) * 4 + col);
+                if (row < 4) //下
+                    pool.push((row + 1) * 4 + col);
+                if (col > 0) //左
+                    pool.push(i - 1);
+                if (col < 4) //右
+                    pool.push(i + 1);
+                return pool;
+            }
+
+            $('.picell').click(function () {
+                //找尋上下左右有沒有Pic0，有則可以與它交換位置
+                //先找出元素是16個中第幾個?
+                var cells = $("#puzzle div");
+                var i = cells.index(this);
+                var toCheck = getNearPos(i);
+                while (toCheck.length > 0) {
+                    var j = toCheck.pop();
+                    if (cells.eq(j).attr("id") == "Pic0") //為空白格，交換位子
+                    {
+                        //排序，必要時對調，讓i < j
+                        if (i > j) { var k = j; j = i; i = k; }
+                        var ahead = cells.eq(i);
+                        var behind = cells.eq(j);
+                        var behindPrev = behind.prev();
+                        //左右對調
+                        if (Math.abs(i - j) == 1)
+                            behind.after(ahead);
+                        else //上下對調
+                        {
+                            ahead.after(behind);
+                            behindPrev.after(ahead);
+                        }
+                        break;
+                    }
+                }
+            });
+
+            $("input:button").click(function () {
+                for (var i = 0; i < 500; i++) {
+                    var cells = $("#puzzle div");
+                    //找出空格所在位置，並取得其相鄰圖塊
+                    var toMove = getNearPos(cells.index($("#Pic0")[0]));
+                    cells.eq(toMove[ //由空格的相鄰圖塊擇一挪動
+                        parseInt(Math.random() * toMove.length)
+                    ]).click();
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
